@@ -1,0 +1,133 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Dark background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.app-container {
+    text-align: center;
+    width: 100%;
+    max-width: 500px;
+    padding: 20px;
+    background-color: #1f1f1f; /* Dark gray card background */
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+}
+
+.title {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #FBB714; /* Yellow title */
+    margin-bottom: 20px;
+}
+
+.weather-card {
+    background-color: #121212; /* Dark gray for the weather card */
+    padding: 25px;
+    border-radius: 16px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Input container for RGB border animation */
+.input-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 12px;
+    animation: rgb-border 3s infinite linear; /* RGB animation applied here */
+    border: 3px solid transparent; /* Initial transparent border to show animation */
+}
+
+input {
+    padding: 12px;
+    width: 70%;
+    border: none; /* Remove input border */
+    border-radius: 12px;
+    font-size: 1rem;
+    outline: none;
+    color: #fff;
+    background-color: #121212; /* Dark background for input */
+}
+
+input::placeholder {
+    color: #aaa;
+}
+
+button {
+    padding: 12px 18px;
+    font-size: 1rem;
+    background-color: #FBB714; /* Yellow background for the button */
+    color: #121212; /* Dark text on the button */
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e4a300; /* Slightly darker yellow for hover effect */
+}
+
+/* RGB Border Animation */
+@keyframes rgb-border {
+    0% {
+        border-color: rgb(255, 116, 116);
+    }
+    25% {
+        border-color: rgb(121, 255, 121);
+    }
+    50% {
+        border-color: rgb(178, 178, 255);
+    }
+    75% {
+        border-color: rgb(255, 255, 170);
+    }
+    100% {
+        border-color: rgb(255, 125, 255);
+    }
+}
+
+#weather-info {
+    margin-top: 20px;
+    font-size: 1.2rem;
+    color: #ddd; /* Light text for weather details */
+}
+
+#weather-info h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    font-weight: 600;
+    color: #FBB714; /* Yellow text for city name */
+}
+
+#weather-info p {
+    margin: 8px 0;
+}
+
+.icon {
+    font-size: 80px;
+    color: #FBB714; /* Yellow icon color */
+    margin-top: 20px;
+}
+
+@media (max-width: 480px) {
+    .app-container {
+        width: 90%;
+    }
+
+    input, button {
+        width: 100%;
+    }
+}
