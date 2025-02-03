@@ -45,6 +45,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
     padding: 10px;
     border-radius: 12px;
     animation: rgb-border 3s infinite linear; /* RGB animation applied here */
